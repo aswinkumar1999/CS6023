@@ -59,17 +59,25 @@ int main()
     //
     // cudaMemcpy(resmat, matdev, N * N * sizeof(int),
     //            cudaMemcpyDeviceToHost);
+
+    // printf("\n");
+    // print_matrix(mathost, N);
     //
-    // // printf("\n");
-    // // print_matrix(mathost, N);
-    // //
-    // //
-    // // printf("\n");
-    // // print_matrix(resmat, N);
     //
+    // printf("\n");
+    // print_matrix(resmat, N);
+
     // printf("%d\n", check_if_transpose(mathost, resmat, N));
-
-
+    //
+    // // Initialize lower triangular matrix
+    // for(i=0; i<N; i++) {
+    //     for(j=0; j<N; j++) {
+    //         if (i>=j)
+    //             mathost[i*N + j] = rand()%9 + 1;
+    //         else
+    //             mathost[i*N + j] = 0;
+    //     }
+    // }
 
     // Kernel 2
     // int griddim2 = ceil((float)(N * N) / (1024 * 32 * 32));
@@ -79,14 +87,22 @@ int main()
     //
     // cudaMemcpy(resmat, matdev, N * N * sizeof(int),
     //             cudaMemcpyDeviceToHost);
-    // printf("\n");
-    // print_matrix(mathost, N);
-    // printf("\n");
-    // print_matrix(resmat, N);
-    // printf("\n");
+    // // printf("\n");
+    // // print_matrix(mathost, N);
+    // // printf("\n");
+    // // print_matrix(resmat, N);
+    // // printf("\n");
     // printf("Is transpose: %d\n", check_if_transpose(mathost, resmat, N));
 
-
+    // Initialize lower triangular matrix
+    // for(i=0; i<N; i++) {
+    //     for(j=0; j<N; j++) {
+    //         if (i>=j)
+    //             mathost[i*N + j] = rand()%9 + 1;
+    //         else
+    //             mathost[i*N + j] = 0;
+    //     }
+    // }
 
     // Kernel 3
     int griddim3 = ceil((float)(N * N) / (1024 * 32));

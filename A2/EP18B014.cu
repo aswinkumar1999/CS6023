@@ -163,6 +163,6 @@ int main()
     cudaMemcpy(B_gout, B_gin, (M+1) * (N+1) * sizeof(int),cudaMemcpyDeviceToHost);
     // Print Matrix
     print_matrix(B_gout,M+1,N+1);
-    // Helper Function to Check if CPU vs GPU is same 
+    // Helper Function to Check if CPU vs GPU is same
       // printf("%d\n", check_same(B_gout,B_cout,M+1,N+1));
 }
